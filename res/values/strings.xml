@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Guidami quanto costa ?</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="car_types">
+		<item>ECONOMY Panda</item>
+		<item>ECONOMY Smart</item>
+		<item>CITY GrandePunto</item>
+		<item>CITY Ypsilon</item>
+		<item>CITY 500</item>
+		<item>FLEXY DobloCombi</item>
+		<item>FLEXY DobloPersone</item>
+		<item>PREMIUM Prius</item>
+		<item>PREMIUM Giulietta</item>
+		<item>PREMIUM Touran</item>
+		<item>PREMIUM Mito</item>
+		<item>CARGO DobloCargo</item>
+		<item>CARGO Ducato</item>
+    </string-array>
+    <string name="disclamer">Unofficial application of car sharing service ATM (mi). The calculated price is an estimate very close to what will be the cost on the invoice provided by ATM.</string>
+    
+</resources>
