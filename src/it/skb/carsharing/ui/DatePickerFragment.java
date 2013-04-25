@@ -15,6 +15,7 @@ public class DatePickerFragment extends DialogFragment implements OnDateSetListe
 	
 	private MainActivity ma;
 	private TimePickerFragment timePickerFragment;
+	private boolean fired = false;
 	
 	public DatePickerFragment(MainActivity ma) {
 		this.ma = ma;
@@ -23,8 +24,11 @@ public class DatePickerFragment extends DialogFragment implements OnDateSetListe
 
 	@Override
 	public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-		ma.setDate(getTag(), year, monthOfYear, dayOfMonth);
-		timePickerFragment.show(getFragmentManager(), getTag());				
+		if (!fired) { //trick because android 4.2 datepicker call twice ondatechangedlistener
+			fired = true;
+			ma.setDate(getTag(), year, monthOfYear, dayOfMonth);
+			timePickerFragment.show(getFragmentManager(), getTag());				
+		}		
 	}
 
 	@Override
